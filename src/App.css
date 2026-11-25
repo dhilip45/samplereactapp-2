@@ -1,0 +1,190 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #253047;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-header h1 {
+  color: #173b70;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: #6b7280;
+}
+
+form h3 {
+  color: #173b70;
+  font-size: 19px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  margin: 30px 0 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dce5;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.terms input {
+  width: 16px;
+  height: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.form-actions button,
+.success-message button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reset-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.submit-btn,
+.success-message button {
+  background: #1d4ed8;
+  color: white;
+}
+
+.submit-btn:hover,
+.success-message button:hover {
+  background: #173b70;
+}
+
+.success-message {
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.success-message h2 {
+  color: #15803d;
+}
+
+.success-message p {
+  margin-bottom: 25px;
+  color: #6b7280;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 15px 10px;
+  }
+
+  .form-container {
+    padding: 20px 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  color: #253047 !important;
+  background-color: #ffffff !important;
+  caret-color: #2563eb;
+  opacity: 1;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
